@@ -1,0 +1,7 @@
+* TODO Display whether or not a tag is in the picture
+** TODO Install apriltags
+** TODO Convert image into proper format
+** TODO Pass image into apriltags
+** TODO Deal with camera feed
+***
+** TODO make output
