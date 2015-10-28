@@ -1,0 +1,14 @@
+prefix=/opt
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/ImageMagick-6
+includearchdir=/opt/include/ImageMagick-6
+libname=Magick++-6.Q16
+ 
+Name: Magick++
+Description: Magick++ - C++ API for ImageMagick (ABI Q16)
+Version: 6.9.2
+Requires: MagickWand
+Libs: -L${libdir} -l${libname}
+Libs.private: -L${libdir} -l${libname}     -L/opt/local/lib -lfreetype     -L/opt/local/lib -lpng16      -L/opt/local/lib -lfontconfig -lfreetype     -lXext -lXt   -lSM -lICE -lX11  -L/opt/local/lib -llzma  -lbz2   -L/opt/local/lib -lpangocairo-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lintl -lcairo   -L/opt/local/lib -lxml2  -L/opt/local/lib -lgvc -lcgraph -lcdt  -L/opt/local/lib -lz   -lm      -lm
+Cflags: -I${includearchdir} -I${includedir} -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16

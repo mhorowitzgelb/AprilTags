@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuremap [
+<!ELEMENT configuremap (configure)+>
+<!ELEMENT configure (#PCDATA)>
+<!ATTLIST configure name CDATA #REQUIRED>
+<!ATTLIST configure value CDATA #REQUIRED>
+]>
+<configuremap>
+  <configure name="CC" value="gcc"/>
+  <configure name="CFLAGS" value="-I/opt/local/include/libxml2  -I/opt/local/include/libpng16   -I/opt/local/include/pango-1.0 -I/opt/local/include/harfbuzz -I/opt/local/include -I/opt/local/include/pango-1.0 -I/opt/local/include/cairo -I/opt/local/include/glib-2.0 -I/opt/local/lib/glib-2.0/include -I/opt/local/include -I/opt/local/include/pixman-1 -I/opt/local/include -I/opt/local/include/freetype2 -I/opt/local/include -I/opt/local/include/libpng16 -I/opt/local/include -I/opt/local/include/freetype2 -I/opt/local/include/libpng16 -I/opt/local/include  -I/opt/local/include  -I/opt/local/include/graphviz  -I/opt/local/include/freetype2  -I/opt/local/include -I/opt/local/include/freetype2 -I/opt/local/include -I/opt/local/include/libpng16 -I/opt/local/include -I/opt/local/include/freetype2  -I/opt/local/include    -g -O2 -Wall -mtune=core-avx-i -fexceptions -D_FORTIFY_SOURCE=0 -D_THREAD_SAFE -pthread -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16"/>
+  <configure name="CODER_PATH" value="/opt/lib/ImageMagick-6.9.2/modules-Q16/coders"/>
+  <configure name="CONFIGURE_PATH" value="/opt/etc/ImageMagick-6/"/>
+  <configure name="CONFIGURE" value="./configure  '--prefix=/opt' '--with-quantum-depth=16' '--disable-dependency-tracking' '--without-perl'"/>
+  <configure name="COPYRIGHT" value="Copyright (C) 1999-2015 ImageMagick Studio LLC"/>
+  <configure name="CPPFLAGS" value="-I/opt/include/ImageMagick-6"/>
+  <configure name="CXXFLAGS" value="-g -O2 -D_THREAD_SAFE -pthread"/>
+  <configure name="CXX" value="g++"/>
+  <configure name="DEFS" value="-DHAVE_CONFIG_H"/>
+  <configure name="DELEGATES" value="bzlib mpeg fontconfig freetype lzma pango png ps x xml zlib"/>
+  <configure name="DISTCHECK_CONFIG_FLAGS" value=" --disable-deprecated  --with-quantum-depth=16  --with-jemalloc=no  --with-umem=no  --with-autotrace=no  --with-gslib=no  --with-fontpath=  --with-rsvg=no  --with-perl=no "/>
+  <configure name="DOCUMENTATION_PATH" value="/opt/share/doc/ImageMagick-6"/>
+  <configure name="EXEC-PREFIX" value="/opt"/>
+  <configure name="EXECUTABLE_PATH" value="/opt/bin"/>
+  <configure name="FEATURES" value="DPC Cipher"/>
+  <configure name="FILTER_PATH" value="/opt/lib/ImageMagick-6.9.2/modules-Q16/filters"/>
+  <configure name="HOST" value="x86_64-apple-darwin14.4.0"/>
+  <configure name="INCLUDE_PATH" value="/opt/include/ImageMagick-6"/>
+  <configure name="LDFLAGS" value="-L/opt/lib   -L/usr/X11/lib"/>
+  <configure name="LIBRARY_PATH" value="/opt/lib/ImageMagick-6.9.2"/>
+  <configure name="LIBS" value="    -L/opt/local/lib -lfreetype     -L/opt/local/lib -lpng16      -L/opt/local/lib -lfontconfig -lfreetype     -lXext -lXt   -lSM -lICE -lX11  -L/opt/local/lib -llzma  -lbz2   -L/opt/local/lib -lpangocairo-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lintl -lcairo   -L/opt/local/lib -lxml2  -L/opt/local/lib -lgvc -lcgraph -lcdt  -L/opt/local/lib -lz   -lm     "/>
+  <configure name="LIB_VERSION_NUMBER" value="6,9,2,4"/>
+  <configure name="LIB_VERSION" value="0x692"/>
+  <configure name="NAME" value="ImageMagick"/>
+  <configure name="PCFLAGS" value="-DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16"/>
+  <configure name="PREFIX" value="/opt"/>
+  <configure name="QuantumDepth" value="16"/>
+  <configure name="RELEASE_DATE" value="2015-10-27"/>
+  <configure name="SHAREARCH_PATH" value="/opt/lib/ImageMagick-6.9.2/config-Q16"/>
+  <configure name="SHARE_PATH" value="/opt/share/ImageMagick-6"/>
+  <configure name="GIT_REVISION" value="10274" />
+  <configure name="TARGET_CPU" value="x86_64"/>
+  <configure name="TARGET_OS" value="darwin14.4.0"/>
+  <configure name="TARGET_VENDOR" value="apple"/>
+  <configure name="VERSION" value="6.9.2"/>
+  <configure name="WEBSITE" value="http://www.imagemagick.org"/>
+</configuremap>

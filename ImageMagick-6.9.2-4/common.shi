@@ -1,0 +1,21 @@
+# Test environment
+top_srcdir='/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4'
+top_builddir='/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4'
+
+set -a
+COMPARE="/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/utilities/compare"
+COMPOSITE="/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/utilities/composite"
+CONJURE="/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/utilities/conjure"
+CONVERT="/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/utilities/convert"
+DISPLAY="/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/utilities/display"
+IDENTIFY="/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/utilities/identify"
+MONTAGE="/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/utilities/montage" 
+VALIDATE="/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/tests/validate"
+DRAWTEST="/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/tests/drawtest"
+WANDTEST="/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/tests/wandtest"
+LD_LIBRARY_PATH="/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/magick/.libs:${LD_LIBRARY_PATH}"
+MAGICK_CODER_MODULE_PATH="/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/coders"
+MAGICK_CONFIGURE_PATH="/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/config:/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/config"
+MAGICK_FILTER_MODULE_PATH="/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/filters"
+PATH="/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/utilities:/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/tests:${PATH}"
+set +a
