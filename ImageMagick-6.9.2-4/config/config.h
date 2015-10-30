@@ -11,7 +11,7 @@
 /* #undef BUILD_MODULES */
 
 /* Define if you have the bzip2 library */
-#define BZLIB_DELEGATE 1
+/* #undef BZLIB_DELEGATE */
 
 /* Define if you have CAIRO library */
 /* #undef CAIRO_DELEGATE */
@@ -26,7 +26,7 @@
 #define CODER_DIRNAME "coders"
 
 /* Directory where architecture-dependent configuration files live. */
-#define CONFIGURE_PATH "/opt/etc/ImageMagick-6/"
+#define CONFIGURE_PATH "/usr/local/etc/ImageMagick-6/"
 
 /* Subdirectory of lib where architecture-dependent configuration files live.
    */
@@ -36,7 +36,7 @@
 /* #undef DJVU_DELEGATE */
 
 /* Directory where ImageMagick documents live. */
-#define DOCUMENTATION_PATH "/opt/share/doc/ImageMagick-6/"
+#define DOCUMENTATION_PATH "/usr/local/share/doc/ImageMagick-6/"
 
 /* Define if you have Display Postscript */
 /* #undef DPS_DELEGATE */
@@ -45,7 +45,7 @@
 /* #undef EXCLUDE_DEPRECATED */
 
 /* Directory where executables are installed. */
-#define EXECUTABLE_PATH "/opt/bin/"
+#define EXECUTABLE_PATH "/usr/local/bin/"
 
 /* Define if you have FFTW library */
 /* #undef FFTW_DELEGATE */
@@ -54,19 +54,19 @@
 #define FILTER_DIRNAME "filters"
 
 /* Define if you have FONTCONFIG library */
-#define FONTCONFIG_DELEGATE 1
+/* #undef FONTCONFIG_DELEGATE */
 
 /* Define if you have FlashPIX library */
 /* #undef FPX_DELEGATE */
 
 /* Define if you have FREETYPE library */
-#define FREETYPE_DELEGATE 1
+/* #undef FREETYPE_DELEGATE */
 
 /* Define if you have Ghostscript library or framework */
 /* #undef GS_DELEGATE */
 
 /* Define if you have GVC library */
-#define GVC_DELEGATE 1
+/* #undef GVC_DELEGATE */
 
 /* Define to 1 if you have the `acosh' function. */
 #define HAVE_ACOSH 1
@@ -105,10 +105,10 @@
 #define HAVE_CLOCK 1
 
 /* Define to 1 if you have clock_gettime. */
-/* #undef HAVE_CLOCK_GETTIME */
+#define HAVE_CLOCK_GETTIME 1
 
 /* Define to 1 if clock_gettime supports CLOCK_REALTIME. */
-/* #undef HAVE_CLOCK_REALTIME */
+#define HAVE_CLOCK_REALTIME 1
 
 /* Define to 1 if you have the <CL/cl.h> header file. */
 /* #undef HAVE_CL_CL_H */
@@ -136,7 +136,7 @@
 
 /* Define to 1 if you have the declaration of `strlcpy', and to 0 if you
    don't. */
-#define HAVE_DECL_STRLCPY 1
+#define HAVE_DECL_STRLCPY 0
 
 /* Define to 1 if you have the declaration of `tzname', and to 0 if you don't.
    */
@@ -256,7 +256,7 @@
 #define HAVE_LIMITS_H 1
 
 /* Define to 1 if you have the <linux/unistd.h> header file. */
-/* #undef HAVE_LINUX_UNISTD_H */
+#define HAVE_LINUX_UNISTD_H 1
 
 /* Define to 1 if you have the `lltostr' function. */
 /* #undef HAVE_LLTOSTR */
@@ -284,10 +284,10 @@
 #define HAVE_LSTAT 1
 
 /* Define to 1 if you have the <machine/param.h> header file. */
-#define HAVE_MACHINE_PARAM_H 1
+/* #undef HAVE_MACHINE_PARAM_H */
 
 /* Define to 1 if you have the <mach-o/dyld.h> header file. */
-#define HAVE_MACH_O_DYLD_H 1
+/* #undef HAVE_MACH_O_DYLD_H */
 
 /* Define to 1 if <wchar.h> declares mbstate_t. */
 #define HAVE_MBSTATE_T 1
@@ -344,10 +344,10 @@
 #define HAVE_POPEN 1
 
 /* Define to 1 if you have the `posix_fadvise' function. */
-/* #undef HAVE_POSIX_FADVISE */
+#define HAVE_POSIX_FADVISE 1
 
 /* Define to 1 if you have the `posix_fallocate' function. */
-/* #undef HAVE_POSIX_FALLOCATE */
+#define HAVE_POSIX_FALLOCATE 1
 
 /* Define to 1 if you have the `posix_madvise' function. */
 #define HAVE_POSIX_MADVISE 1
@@ -410,10 +410,10 @@
 #define HAVE_SETVBUF 1
 
 /* X11 server supports shape extension */
-#define HAVE_SHAPE 1
+/* #undef HAVE_SHAPE */
 
 /* X11 server supports shared memory extension */
-#define HAVE_SHARED_MEMORY 1
+/* #undef HAVE_SHARED_MEMORY */
 
 /* Define to 1 if you have the `sigaction' function. */
 #define HAVE_SIGACTION 1
@@ -476,10 +476,10 @@
 #define HAVE_STRING_H 1
 
 /* Define to 1 if you have the `strlcat' function. */
-#define HAVE_STRLCAT 1
+/* #undef HAVE_STRLCAT */
 
 /* Define to 1 if you have the `strlcpy' function. */
-#define HAVE_STRLCPY 1
+/* #undef HAVE_STRLCPY */
 
 /* Define to 1 if you have the `strncasecmp' function. */
 #define HAVE_STRNCASECMP 1
@@ -544,7 +544,7 @@
 #define HAVE_SYS_SELECT_H 1
 
 /* Define to 1 if you have the <sys/sendfile.h> header file. */
-/* #undef HAVE_SYS_SENDFILE_H */
+#define HAVE_SYS_SENDFILE_H 1
 
 /* Define to 1 if you have the <sys/socket.h> header file. */
 #define HAVE_SYS_SOCKET_H 1
@@ -553,7 +553,7 @@
 #define HAVE_SYS_STAT_H 1
 
 /* Define to 1 if you have the <sys/syslimits.h> header file. */
-#define HAVE_SYS_SYSLIMITS_H 1
+/* #undef HAVE_SYS_SYSLIMITS_H */
 
 /* Define to 1 if you have the <sys/timeb.h> header file. */
 #define HAVE_SYS_TIMEB_H 1
@@ -648,7 +648,7 @@
 #define HAVE_VFPRINTF 1
 
 /* Define to 1 if you have the `vfprintf_l' function. */
-#define HAVE_VFPRINTF_L 1
+/* #undef HAVE_VFPRINTF_L */
 
 /* Define to 1 if you have the `vprintf' function. */
 #define HAVE_VPRINTF 1
@@ -657,7 +657,7 @@
 #define HAVE_VSNPRINTF 1
 
 /* Define to 1 if you have the `vsnprintf_l' function. */
-#define HAVE_VSNPRINTF_L 1
+/* #undef HAVE_VSNPRINTF_L */
 
 /* Define to 1 if you have the `vsprintf' function. */
 #define HAVE_VSPRINTF 1
@@ -690,7 +690,7 @@
 #define HAVE__EXIT 1
 
 /* Define to 1 if you have the `_NSGetExecutablePath' function. */
-#define HAVE__NSGETEXECUTABLEPATH 1
+/* #undef HAVE__NSGETEXECUTABLEPATH */
 
 /* Define to 1 if you have the `_pclose' function. */
 /* #undef HAVE__PCLOSE */
@@ -717,10 +717,10 @@
 /* #undef HasUMEM */
 
 /* Directory where ImageMagick architecture headers live. */
-#define INCLUDEARCH_PATH "/opt/include/ImageMagick-6/"
+#define INCLUDEARCH_PATH "/usr/local/include/ImageMagick-6/"
 
 /* Directory where ImageMagick headers live. */
-#define INCLUDE_PATH "/opt/include/ImageMagick-6/"
+#define INCLUDE_PATH "/usr/local/include/ImageMagick-6/"
 
 /* ImageMagick is formally installed under prefix */
 #define INSTALLED_SUPPORT 1
@@ -738,7 +738,7 @@
 /* #undef LIBOPENJP2_DELEGATE */
 
 /* Directory where architecture-dependent files live. */
-#define LIBRARY_PATH "/opt/lib/ImageMagick-6.9.2/"
+#define LIBRARY_PATH "/usr/local/lib/ImageMagick-6.9.2/"
 
 /* Subdirectory of lib where ImageMagick architecture dependent files are
    installed */
@@ -759,7 +759,7 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define if you have LZMA library */
-#define LZMA_DELEGATE 1
+/* #undef LZMA_DELEGATE */
 
 /* Define to prepend to default font search path. */
 /* #undef MAGICK_FONT_PATH */
@@ -768,10 +768,10 @@
 #define MAGICK_TARGET_CPU x86_64
 
 /* Target Host OS */
-#define MAGICK_TARGET_OS darwin14.4.0
+#define MAGICK_TARGET_OS linux-gnu
 
 /* Target Host Vendor */
-#define MAGICK_TARGET_VENDOR apple
+#define MAGICK_TARGET_VENDOR unknown
 
 /* Module directory name without ABI part. */
 #define MODULES_BASEDIRNAME "modules"
@@ -810,13 +810,13 @@
 #define PACKAGE_VERSION "6.9.2-4"
 
 /* Define if you have PANGOCAIRO library */
-#define PANGOCAIRO_DELEGATE 1
+/* #undef PANGOCAIRO_DELEGATE */
 
 /* Define if you have PANGO library */
-#define PANGO_DELEGATE 1
+/* #undef PANGO_DELEGATE */
 
 /* Define if you have PNG library */
-#define PNG_DELEGATE 1
+/* #undef PNG_DELEGATE */
 
 /* Define to necessary symbol if this constant uses a non-standard name on
    your system. */
@@ -850,7 +850,7 @@
 /* #undef SHAREARCH_DIRNAME */
 
 /* Directory where architecture-independent configuration files live. */
-#define SHARE_PATH "/opt/share/ImageMagick-6/"
+#define SHARE_PATH "/usr/local/share/ImageMagick-6/"
 
 /* Subdirectory of lib where architecture-independent configuration files
    live. */
@@ -914,7 +914,7 @@
 #define STDC_HEADERS 1
 
 /* Define to 1 if strerror_r returns char *. */
-/* #undef STRERROR_R_CHAR_P */
+#define STRERROR_R_CHAR_P 1
 
 /* Define if you have POSIX threads libraries and header files. */
 #define THREAD_SUPPORT 1
@@ -981,19 +981,19 @@
 #define X11_CONFIGURE_PATH ""
 
 /* Define if you have X11 library */
-#define X11_DELEGATE 1
+/* #undef X11_DELEGATE */
 
 /* Define if you have XML library */
-#define XML_DELEGATE 1
+/* #undef XML_DELEGATE */
 
 /* Define to 1 if the X Window System is missing or not being used. */
-/* #undef X_DISPLAY_MISSING */
+#define X_DISPLAY_MISSING 1
 
 /* Build self-contained, embeddable, zero-configuration ImageMagick */
 /* #undef ZERO_CONFIGURATION_SUPPORT */
 
 /* Define if you have ZLIB library */
-#define ZLIB_DELEGATE 1
+/* #undef ZLIB_DELEGATE */
 
 /* Enable large inode numbers on Mac OS X 10.5.  */
 #ifndef _DARWIN_USE_64_BIT_INODE

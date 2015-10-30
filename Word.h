@@ -1,0 +1,3 @@
+struct Word{
+	char* word;
+}

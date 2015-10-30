@@ -5,7 +5,7 @@
 #
 #
 
-prefix=/opt
+prefix=/usr/local
 exec_prefix=${prefix}
 
 usage='Usage: Magick++-config [--cppflags] [--cxxflags] [--exec-prefix] [--ldflags] [--libs] [--prefix] [--version]

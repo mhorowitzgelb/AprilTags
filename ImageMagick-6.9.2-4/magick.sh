@@ -19,13 +19,13 @@
 #
 #    magick.sh convert -size 640x480 gradient:black-yellow gradient.png
 
-top_srcdir='/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4'
-top_builddir='/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4'
+top_srcdir='/home/mhorowitzgelb/AprilTags/ImageMagick-6.9.2-4'
+top_builddir='/home/mhorowitzgelb/AprilTags/ImageMagick-6.9.2-4'
 
-MAGICK_CODER_MODULE_PATH='/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/coders'
-MAGICK_CONFIGURE_SRC_PATH='/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/config'
-MAGICK_CONFIGURE_BUILD_PATH='/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/config'
-MAGICK_FILTER_MODULE_PATH='/Users/maxhorowitz/AprilTags/ImageMagick-6.9.2-4/ImageMagick-6.9.2-4/filters'
+MAGICK_CODER_MODULE_PATH='/home/mhorowitzgelb/AprilTags/ImageMagick-6.9.2-4/coders'
+MAGICK_CONFIGURE_SRC_PATH='/home/mhorowitzgelb/AprilTags/ImageMagick-6.9.2-4/config'
+MAGICK_CONFIGURE_BUILD_PATH='/home/mhorowitzgelb/AprilTags/ImageMagick-6.9.2-4/config'
+MAGICK_FILTER_MODULE_PATH='/home/mhorowitzgelb/AprilTags/ImageMagick-6.9.2-4/filters'
 DIRSEP=':'
 
 PATH="${top_builddir}/utilities:${PATH}"

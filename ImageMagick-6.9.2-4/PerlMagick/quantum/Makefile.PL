@@ -161,11 +161,11 @@ foreach my $delegate (@tested_delegates) {
 }
 
 # defaults for LIBS & INC & CCFLAGS params that we later pass to Writemakefile
-my $INC_magick = '-I../../ -I../..   -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16  -I"' . $Config{'usrinc'} . '/ImageMagick"';
+my $INC_magick = '-I../../ -I../..   -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I"' . $Config{'usrinc'} . '/ImageMagick"';
 my $LIBS_magick = '-L../../magick/.libs -lMagickCore-6.Q16 -lperl -lm';
-my $CCFLAGS_magick = "$Config{'ccflags'} -I/usr/include/libxml2  -I/usr/include/libpng16   -pthread -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/libdrm -I/usr/include/libpng16  -pthread -I/usr/include/OpenEXR -I/usr/include/libdrm   -I/usr/include/freetype2 -I/usr/include/libpng16  -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/libpng16  -pthread     -fopenmp -O3 -g -Wall -mtune=sandybridge -fexceptions -pthread -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16";
-my $LDFLAGS_magick   = "-L../../magick/.libs -lMagickCore-6.Q16 $Config{'ldflags'} -Wl,-z,relro ";
-my $LDDLFLAGS_magick = "-L../../magick/.libs -lMagickCore-6.Q16 $Config{'lddlflags'} -Wl,-z,relro ";
+my $CCFLAGS_magick = "$Config{'ccflags'}  -fopenmp -g -O2 -Wall -mtune=core-avx-i -fexceptions -pthread -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16";
+my $LDFLAGS_magick   = "-L../../magick/.libs -lMagickCore-6.Q16 $Config{'ldflags'} ";
+my $LDDLFLAGS_magick = "-L../../magick/.libs -lMagickCore-6.Q16 $Config{'lddlflags'} ";
 
 if (($^O eq 'MSWin32') && ($Config{cc} =~ /gcc/)) {
   my($Ipaths, $Lpaths) = AutodetectWin32gcc();
@@ -203,16 +203,16 @@ WriteMakefile
    'INC'	=> $INC_magick,
 
    # C compiler
-   #'CC' => 'gcc',
+   #'CC' => 'gcc -std=gnu99 -std=gnu99',
 
    # C pre-processor flags (e.g. -I & -D options)
-   # 'CPPFLAGS' => "$Config{'cppflags'}   -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 ",
+   # 'CPPFLAGS' => "$Config{'cppflags'}   -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16",
 
    # C compiler flags (e.g. -O -g)
    'CCFLAGS' => $CCFLAGS_magick,
 
    # Linker
-   #'LD' => $Config{'ld'} == $Config{'cc'} ? 'gcc' : $Config{'ld'},
+   #'LD' => $Config{'ld'} == $Config{'cc'} ? 'gcc -std=gnu99 -std=gnu99' : $Config{'ld'},
 
    # Linker flags for building an executable
    'LDFLAGS' =>  $LDFLAGS_magick,
@@ -221,7 +221,7 @@ WriteMakefile
    'LDDLFLAGS' => $LDDLFLAGS_magick,
 
    # Install PerlMagick binary into ImageMagick bin directory
-   'INSTALLBIN'	=> '/usr/bin',
+   'INSTALLBIN'	=> '/usr/local/bin',
 
    # Library specification
    'LIBS' => [ $LIBS_magick ],
@@ -233,14 +233,14 @@ WriteMakefile
    # 'OPTIMIZE'	=> '',
 
    # Use same compiler as ImageMagick
-   'PERLMAINCC'	=> 'g++ -fopenmp',
+   'PERLMAINCC'	=> ' -fopenmp',
    'PM' => { 'Q16.pm' => '$(INST_LIBDIR)/Q16.pm' },
    'XS' => { 'Q16.xs' => 'Q16.xs' },
    'AR' => 'ar',
-   'LD' => 'g++',
+   'LD' => '',
 
    # Set Perl installation prefix to ImageMagick installation prefix
-#   'PREFIX'	=> '/usr',
+#   'PREFIX'	=> '/usr/local',
 
    # Include delegate directories in tests
    test	=> { TESTS	=>	$delegate_tests},
@@ -265,6 +265,6 @@ sub MY::makeaperl {
      # tries to insert our library path first. Also, use the same compiler used
      # to build perlmain.c to link so that a C++ compiler may be used if
      # necessary.
-     $inherited =~ s:MAP_LINKCMD\s.*\s*\$\(CC\):MAP_LINKCMD   = \$(PERLMAINCC) -L/usr/lib64: ;
+     $inherited =~ s:MAP_LINKCMD\s.*\s*\$\(CC\):MAP_LINKCMD   = \$(PERLMAINCC) -L/usr/local/lib: ;
      $inherited;
  }
