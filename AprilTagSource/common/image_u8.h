@@ -44,7 +44,7 @@ struct image_u8
     const int width, height;
     const int stride;
 
-    uint8_t *const buf; // const pointer, not buf
+    uint8_t *buf; // const pointer, not buf
 };
 
 typedef struct image_u8_lut image_u8_lut_t;
